@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donate</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showSection(id) {
+            document.getElementById("bank").style.display = "none";
+            document.getElementById("card").style.display = "none";
+
+            document.getElementById(id).style.display = "block";
+        }
+    </script>
+</head>
+<body>
+
+<h2>Select Payment Method</h2>
+<ol>
+        <li><a onclick="showSection('bank')">Bank Transfer</a></li>
+        <li><a onclick="showSection('card')">Debit/Credit Card</a></li>
+</ol>
+    <!-- BANK TRANSFER SECTION -->
+    <div id="bank" class="section">
+        <h3>Bank Transfer Details</h3>
+
+        <p><strong>Bank Name:</strong> Globus Bank</p>
+        <p><strong>Account Name:</strong> Hope Foundation </p>
+        <p><strong>Account Number:</strong> 0034569876</p>
+
+        <label>Amount Donated:</label><br>
+        <input type="number" placeholder="Enter amount"><br>
+
+        <button>Confirm Transfer</button>
+    </div>
+
+    <!-- CARD PAYMENT SECTION -->
+    <div id="card" class="section">
+        <h3>Card Payment</h3>
+
+        <label>Card Number:</label><br>
+        <input type="text" maxlength="16" placeholder="1234 5678 9012 3456"><br>
+
+        <label>Expiration Date:</label><br>
+        <input type="day/month"><br>
+
+        <label>Amount to Donate:</label><br>
+        <input type="number"><br>
+
+        <label>CVV (Encrypted):</label><br>
+        <input type="password" maxlength="3" placeholder="*"><br>
+
+        <button>Donate Now</button>
+    </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+ 
